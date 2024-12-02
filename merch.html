@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/merchstyles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Stage Fright Store</title>
+</head>
+<body>
+    <header>
+        <h1>Stage Fright Store</h1>
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="https://sanchibirajdar.github.io/-StageFright/Homepage.html#about#">Band</a></li>
+                <li><a href="https://sanchibirajdar.github.io/-StageFright/Homepage.html#contact">Contact</a></li>
+                 <li><a href="https://sanchibirajdar.github.io/-StageFright/Homepage.html#music">Music</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-image">
+            <img src="images/main.jpeg" alt="Stage Fright Banner" class="hero-image">
+            <div class="overlay">
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="column">
+                <img src="images/TSHIRT.jpeg" alt="Stage Fright T-Shirt">
+                <div class="container">
+                    <h3>Stage Fright T-Shirt</h3>
+                    <p>Show your love for Stage Fright with this classic black tee.</p>
+                    <button onclick="openModal('Stage Fright T-Shirt', 25.99)">Add to Cart - $25.99</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/Hoodie.jpeg"Stage Fright Hoodie">
+                <div class="container">
+                    <h3>Stage Fright Hoodie</h3>
+                    <p>Stay warm and stylish in this cozy hoodie.</p>
+                    <button onclick="openModal('Stage Fright Hoodie', 39.99)">Add to Cart - $39.99</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/WhatsApp Image 2024-12-01 at 6.45.47 PM.jpeg" alt="Stage Fright Album">
+                <div class="container">
+                    <h3>Stage Fright Album</h3>
+                    <p>Get the latest album from Stage Fright and rock out!</p>
+                    <button onclick="openModal('Stage Fright Album', 15.99)">Add to Cart - $15.99</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/Cup.jpg" alt="Stage Fright Mug">
+                <div class="container">
+                    <h3>Stage Fright Mug</h3>
+                    <p>Start your day with coffee in this stylish mug.</p>
+                    <button onclick="openModal('Stage Fright Mug', 12.99)">Add to Cart - $12.99</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/Cap.jpg" alt="Stage Fright Cap">
+                <div class="container">
+                    <h3>Stage Fright Cap</h3>
+                    <p>Wear this cap to show your Stage Fright pride!</p>
+                    <button onclick="openModal('Stage Fright Cap', 19.99)">Add to Cart - $19.99</button>
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/WhatsApp Image 2024-12-01 at 6.43.02 PM.jpeg" alt="Stage Fright Poster">
+                <div class="container">
+                    <h3>Stage Fright Poster</h3>
+                    <p>Decorate your space with this exclusive band poster.</p>
+                    <button onclick="openModal('Stage Fright Poster', 9.99)">Add to Cart - $9.99</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span onclick="closeModal()" class="close">&times;</span>
+                    <h2>Your Cart</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-product-name">Product: <span></span></p>
+                    <p id="modal-product-price">Price: $<span></span></p>
+                    <p><label>Quantity: </label><input type="number" id="quantity" value="1" min="1"></p>
+                    <button class="pay-btn">Proceed to Checkout</button>
+                    <button class="close-btn" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Stage Fright Band. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(productName, productPrice) {
+            document.getElementById('modal-product-name').querySelector('span').textContent = productName;
+            document.getElementById('modal-product-price').querySelector('span').textContent = productPrice.toFixed(2);
+            document.getElementById('cartModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('cartModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

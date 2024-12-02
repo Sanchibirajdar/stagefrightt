@@ -1,0 +1,376 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2E2B26;
+  color: #fff;
+}
+
+.main-image {
+  position: relative; /* Position relative for absolute positioning of children */
+  text-align: center; /* Center the content */
+}
+
+.hero-image {
+  width: 100%; /* Make the image full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.overlay {
+  position: absolute; /* Position overlay absolutely within the main-image */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  padding: 20px; /* Padding around the content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+  /* Removed background-color */
+}
+
+.logo-container {
+  flex: 0 0 auto; /* Prevent the logo container from growing */
+}
+
+.logo {
+  max-width: 150px; /* Adjust the size as needed */
+  height: auto;
+}
+
+nav {
+  flex: 0 0 auto; /* Prevent the nav from growing */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Use inline-flex for horizontal layout */
+}
+
+nav ul li {
+  margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+  /* Dark Blue background-color: #0A1C2B;  Prussian Blue */
+
+  .content-container {
+    width: 100%; /* Full width */
+    padding: 20px; /* Padding around the content */
+}
+
+.content-box {
+    background-color: #2F2C27; /* Background color for the boxes */
+    border: 1px solid #ccc; /* Border for the boxes */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin-bottom: 20px; /* Space between boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.content-box h2 {
+    margin-top: 0; /* Remove top margin for headings */
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+       /* Modal styles */
+       .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 500px;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .modal-header {
+        background-color: teal;
+        color: white;
+        padding: 15px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+    }
+
+    .modal-header span {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .modal-header h2 {
+        margin: 0;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .modal-body label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    .modal-body input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .modal-body button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .modal-body .pay-btn {
+        background-color: teal;
+        color: white;
+    }
+
+    .modal-body .pay-btn:hover {
+        background-color: #005f5f;
+    }
+
+    .modal-body .close-btn {
+        background-color: red;
+        color: white;
+    }
+
+    .modal-body .close-btn:hover {
+        background-color: #990000;
+    }
+
+    .modal-body .help-link {
+        text-align: right;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .modal-body .help-link a {
+        color: blue;
+        text-decoration: none;
+    }
+
+    .modal-body .help-link a:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Styling for the row container to center and align columns */
+    .row {
+      display: flex;
+      justify-content: center; /* Centers content horizontally */
+      gap: 16px; /* Adds space between columns */
+      flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+      margin: 0 auto;
+      max-width: 1200px; /* Max width of the row */
+  }
+
+  /* Styling for each column */
+  .column {
+      flex: 1;
+      min-width: 300px; /* Ensures columns don't get too small */
+      text-align: center;
+  }
+
+  /* Styling for the image */
+  .column img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+  }
+
+  /* Container for the text */
+  .container {
+      padding: 16px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      margin-top: -8px; /* To pull the container closer to the image */
+  }
+
+  /* Styling for the opacity class */
+  .opacity {
+      font-size: 14px;
+      color: gray;
+  }
+
+  /* Styling for the button */
+  button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  button:hover {
+      background-color: #555;
+  }
+
+  /* Styling for the contact section */
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+/* Styling for the social media list */
+.social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+/* Styling for the links and icons */
+.social-media a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.social-media a:hover {
+    color: #0077b5; /* Blue color for hover effect */
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Fright!</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="main-image">
+            <img src="images/main.jpeg" alt="Main Image" class="hero-image">
+            <div class="overlay">
+                <div class="logo-container">
+                    <img src="images/stagt.jfif" class="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="merch.html">Merchandise</a></li>
+                        <li><a href="tour.html">Tour</a></li>
+                        <li><a href="#about">Band</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#music">Music</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <div class="content-box">
+            <section id="about">
+                     <!-- The Band Section -->
+                    <section id="band" style="text-align: center; padding: 64px; max-width: 800px; margin: 0 auto;">
+                        <h2 style="font-size: 36px; margin-bottom: 16px;">THE BAND</h2>
+                        <p style="font-style: italic; font-size: 18px; margin-bottom: 32px;">We love music</p>
+                        <p style="font-size: 16px; text-align: justify; margin-bottom: 32px;">
+                            Stage Fright’s music captures vulnerability and power, pairing raw vocals with bold instrumentals. Their sound layers haunting melodies, poetic lyrics, and heavy buildups, touching on themes of resilience, anxiety, and self-discovery. Fans describe their vibe as a cross between Paramore and early Foo Fighters, with a little bit of grunge energy thrown in.  
+
+                        </p>
+                        <div style="display: flex; justify-content: space-between; gap: 16px;">
+                            <div style="flex: 1; text-align: center;">
+                                <p>Lead Vocalist: Lily Hayes (27) </p>
+                                <img src="images/WhatsApp Image 2024-12-01 at 7.01.54 PM.jpeg" alt="Random Name" style="border-radius: 50%; width: 60%; margin-bottom: 16px;">
+                            </div>
+                            <div style="flex: 1; text-align: center;">
+                                <p>Lead Guitarist: Ethan Vega (28)</p>
+                                <img src="images/T.jpg" alt="Random Name" style="border-radius: 50%; width: 60%; margin-bottom: 16px;">
+                            </div>
+                            <div style="flex: 1; text-align: center;">
+                                <p>Drummer: Jake Carter (26)</p>
+                                <img src="images/drummer.jpg" alt="Random Name" style="border-radius: 50%; width: 60%;">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <div class="content-box">
+                <section id="music">
+                    <h2>Music</h2>
+                    <!-- Slideshow container -->
+                        <div class="slideshow-container">
+
+                            <!-- Full-width images with number and caption text -->
+                            <img src="images/WhatsApp Image 2024-12-01 at 7.59.58 PM.jpeg" style="width: 30%; margin-bottom: 16px;">
+                            <img src="images/WhatsApp Image 2024-12-01 at 6.45.47 PM.jpeg" style="width: 30%; margin-bottom: 16px;">
+                            <img src="images/FRAG.jfif" style="width: 30%; margin-bottom: 16px;">
+                        </div>
+
+                </section>
+            </div>
+            </div>
+            <div class="content-box">
+                <section id="contact">
+                <div class="contact-container" id="contact" style="max-width:800px; margin: 0 auto; padding: 64px;">
+                    <h2 class="contact-heading" style="text-align: center; font-size: 36px;">CONTACT</h2>
+                    <p class="contact-subtitle" style="text-align: center; font-style: italic; opacity: 0.7;">Fan? Drop a note!</p>
+                    <div class="contact-content" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;">
+                        <div class="contact-info" style="flex: 1; min-width: 300px; font-size: 18px; line-height: 1.6;">
+                            <p><i class="fa fa-map-marker" style="width:30px;"></i> Chicago, US</p>
+                            <p><i class="fa fa-phone" style="width:30px;"></i> Phone: +00 151515</p>
+                            <p><i class="fa fa-envelope" style="width:30px;"></i> Email: mail@mail.com</p>
+                        </div>
+                        <div class="contact-form" style="flex: 1; min-width: 300px;">
+                            <form action="/action_page.php" target="_blank">
+                                <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                                    <input type="text" placeholder="Name" name="Name" required style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                    <input type="email" placeholder="Email" name="Email" required style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                </div>
+                                <textarea placeholder="Message" name="Message" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; resize: vertical; height: 100px; margin-bottom: 16px;"></textarea>
+                                <button type="submit" style="background-color: black; color: white; padding: 10px 16px; border: none; border-radius: 4px; cursor: pointer; float: right;">SEND</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>  
+        
+        </div> 
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Stage Fright. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Update the copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

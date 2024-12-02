@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Fright!</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="main-image">
+            <img src="images/main.jpeg" alt="Main Image" class="hero-image">
+            <div class="overlay">
+                <div class="logo-container">
+                    <img src="images/stagt.jfif" alt="Panic! At The Disco Logo" class="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="merch.html">Merchandise</a></li>
+                        <li><a href="tour.html">Tour</a></li>
+                        <li><a href="file:///C:/Users/sanch_19ekkgp/OneDrive/BPA%20web%20design/BPA%20Website%20Design/Homepage.html#about">Band</a></li>
+                        <li><a href="#cfile:///C:/Users/sanch_19ekkgp/OneDrive/BPA%20web%20design/BPA%20Website%20Design/Homepage.html#contact">Contact</a></li>
+                        <li><a href="file:///C:/Users/sanch_19ekkgp/OneDrive/BPA%20web%20design/BPA%20Website%20Design/Homepage.html#music">Music</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+       
+            <div class="container">
+                <h2 class="center">TOUR DATES</h2>
+                <p class="center"><i>Remember to book your tickets!</i></p>
+        
+                <div class="row">
+                    <div class="col">
+                        <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York">
+                        <p><b>New York</b></p>
+                        <p>Fri 27 Nov 2025</p>
+                        <button class="button" class = "center" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                    <div class="col">
+                        <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris">
+                        <p><b>Paris</b></p>
+                        <p>Sat 28 Nov 2025</p>
+                        <button class="button" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                    <div class="col">
+                        <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco">
+                        <p><b>San Francisco</b></p>
+                        <p>Sun 29 Nov 2025</p>
+                        <button class="button" onclick="openModal()">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="ticketModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" onclick="closeModal()">×</button>
+                        <h2>Tickets</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><label>Tickets, $15 per person</label></p>
+                        <input type="text" placeholder="How many?">
+                        <p><label>Send To</label></p>
+                        <input type="text" placeholder="Enter email">
+                        <button class="modal-button">PAY</button>
+                        <button class="modal-button" onclick="closeModal()" style="background-color: red;">Close</button>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                function openModal() {
+                    document.getElementById('ticketModal').style.display = 'flex';
+                }
+        
+                function closeModal() {
+                    document.getElementById('ticketModal').style.display = 'none';
+                }
+            </script>
+        </body>
+        </html>
+        
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Stage Fright. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Update the copyright year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
